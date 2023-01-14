@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Keywords</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Quicksand:wght@300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.14.0/css/all.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <div class="form-group">
+                <h2>Add New <b>Keyword</b>s</h2>
+            </div>
+        </div>
+    </header>
+
+    <section class="main py-5 mx-auto" style="max-width: 1000px;">
+        <form class="w-100" action="" method="post">
+            <div class="container-fluid w-100">
+                <div class="row">
+                    <div class="col-sm-4 col-12 pl-0 pr-1 pl-0">
+                        <select class="form-control" name="type">
+                            <option disabled selected value="">Type</option>
+                            <option value="">Kryword</option>
+                            <option value="">Advertiser</option>
+                            <option value="">Domain</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4 col-12 pl-0 px-1">
+                        <select class="form-control" name="country">
+                            <option disabled selected value="">Country</option>
+                            <option value="eg">egypt</option>
+                            <option value="us">US</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-4 col-12 pl-1 pr-0">
+                        <input type="text" class="form-control" placeholder="enter keyword">
+                    </div>
+                    <div class="col-sm-4 offset-sm-8 offset-0 col-12 pt-2 pl-1 pr-0">
+                        <input type="submit" class="form-control btn btn-primary" value="Add">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <br />
+        <br />
+        <br />
+        <table class="table mx-auto" id="main" style="max-width: 1000px">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Type</th>
+                    <th>Content-Text</th>
+                    <th>Country</th>
+                    <th>Result Count</th>
+                    <th>Status</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Keyword</td>
+                    <td><a href="#">perfume</a></td>
+                    <th>All</th>
+                    <td>70,001</td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><span
+                                    class="badge badge-success">active</span></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><i
+                                    class="fa fa-times text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Advertiser</td>
+                    <td><a href="#">acaciaeg</a></td>
+                    <th>Egypt</th>
+                    <td>1,632</td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><span
+                                    class="badge badge-danger">inactive</span></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><i
+                                    class="fa fa-times text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+    <script src="js/script2.js"></script>
+</body>
+
+</html>

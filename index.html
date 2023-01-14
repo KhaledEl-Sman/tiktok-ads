@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiktok Creative Center</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Quicksand:wght@300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.14.0/css/all.css" />
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="up">
+        <i class="far fa-sort-up"></i>
+    </div>
+
+    <!-- Header -->
+    <nav>
+        <a class="active" href="index.html">Home</a>
+        <a href="main.html">Main</a>
+        <a href="main.html">Users</a>
+        <a href="">
+            <button class="button">Log Out</button>
+        </a>
+    </nav>
+
+    <header>
+        <!-- <form action="url" method="get"> -->
+        <form name="myForm" action="url" method="post">
+            <div class="form-group">
+                <h2>Explore <b>Top Ads</b> on TikTok</h2>
+            </div>
+            <div class="form-group form-btn">
+                <input type="text" name="" id="text" class="form-control"
+                    placeholder="Search by brand or product keywords">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </div>
+            <input type="hidden" value="" name="all_filters" id="form_input">
+        </form>
+    </header>
+
+    <section>
+        <div class="filters">
+            <label class="d-block p-1">Basic filters</label>
+            <div class="filter type_1">
+                <select class="w-100 shadow-sm" id="country" name="">
+                    <option disabled selected value="">Country</option>
+                    <option value="us">United Status</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="eg">EGYPT</option>
+                </select>
+            </div>
+            <div class="filter type_1">
+                <select class="w-100 shadow-sm" id="industry" name="">
+                    <option disabled selected value="">Industry</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="filter type_1">
+                <select class="w-100 shadow-sm" id="objective" name="">
+                    <option disabled selected value="">objective</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="filter type_1 sort_by">
+                <select class="w-100 shadow-sm" id="sort_by" name="">
+                    <option disabled selected value="">Sort By</option>
+                    <option value="CTR">CTR</option>
+                    <option value="CVR">CVR</option>
+                    <option value="Clicks">Clicks</option>
+                    <option value="Conversion">Conversion</option>
+                    <option value="Remain">Remain</option>
+                </select>
+            </div>
+            <div class="filter type_1">
+                <select class="w-100 shadow-sm" id="duration" name="">
+                    <option disabled selected value="">Duration</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="filter type_1 interval">
+                <select class="w-100 shadow-sm" id="interval" name="">
+                    <option disabled selected value="">Interval</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="clearfix"></div>
+            <label class="d-block pt-1 px-1">Date filters</label>
+            <div class="filter type_2 w-50 mr-1">
+                <span>from: </span>
+                <!-- <select class="w-100 shadow-sm" name=""> -->
+                <input class="form-control shadow-sm" id="from" type="date" name="">
+            </div>
+            <div class="filter type_2 w-50 ml-1">
+                <span>to: </span>
+                <!-- <select class="w-100 shadow-sm" name=""> -->
+                <input class="form-control shadow-sm" id="to" type="date" name="">
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="top-filters used">
+            <span style="color: #2d2d2d; font-weight: 400;">Interactive Filters :</span>
+            <span>
+                <button>
+                    <b>Likes</b>
+                    <svg width="16" height="16" viewBox="0 0 48 48" fill="none">
+                        <path d="M24 42L24 6" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M36 30L24 42L12 30" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </span>
+            <span>
+                <button>
+                    <b>Comments</b>
+                    <svg width="16" height="16" viewBox="0 0 48 48" fill="none">
+                        <path d="M24 42L24 6" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M36 30L24 42L12 30" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </span>
+            <span>
+                <button>
+                    <b>Shares</b>
+                    <svg width="16" height="16" viewBox="0 0 48 48" fill="none">
+                        <path d="M24 42L24 6" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M36 30L24 42L12 30" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <div class="text-center py-4">
+            <button type="button" class="btn btn-primary" id="apply_filters">Apply Filters</button>
+        </div>
+        <div class="results mt-4">
+            <span>Results: 562</span>
+        </div>
+        <div class="our__filters">
+        </div>
+        <div class="videos">
+            <div class="video">
+                <form action="" method="" class="favourite">
+                    <button type="submit"><i class="fa fa-star"></i></button>
+                </form>
+                <form action="" method="" class="block">
+                    <button type="submit"><i class="fa fa-ban"></i></button>
+                </form>
+                <div class="overlay rounded">
+                    <div class="play">
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <video class="rounded border shadow-sm" poster="media/poster.webp" preload="none" muted>
+                    <source src="media/Top Ads- high-performing auction ads.mp4" type="video/mp4">
+                </video>
+                <div class="content rounded-bottom">
+                    <span>traffic</span>
+                    <h2>cosmatics</h2>
+                    <a href="">
+                        <small><i class="far fa-thumbs-up"></i>125</small>
+                        <small><i class="far fa-comment"></i>26</small>
+                        <small><i class="fas fa-share"></i>7</small>
+                    </a>
+                </div>
+            </div>
+            <div class="video">
+                <form action="" method="" class="favourite">
+                    <button type="submit"><i class="fa fa-star"></i></button>
+                </form>
+                <form action="" method="" class="block">
+                    <button type="submit"><i class="fa fa-ban"></i></button>
+                </form>
+                <div class="overlay rounded">
+                    <div class="play">
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <video class="rounded border shadow-sm" poster="media/poster.webp" preload="none" muted>
+                    <source src="media/Top Ads- high-performing auction ads.mp4" type="video/mp4">
+                </video>
+                <div class="content rounded-bottom">
+                    <span>traffic</span>
+                    <h2>cosmatics</h2>
+                    <a href="">
+                        <small><i class="far fa-thumbs-up"></i> 125</small>
+                        <small><i class="far fa-comment"></i>26</small>
+                        <small><i class="fas fa-share"></i>7</small>
+                    </a>
+                </div>
+            </div>
+            <div class="video">
+                <form action="" method="" class="favourite">
+                    <button type="submit"><i class="fa fa-star"></i></button>
+                </form>
+                <form action="" method="" class="block">
+                    <button type="submit"><i class="fa fa-ban"></i></button>
+                </form>
+                <div class="overlay rounded">
+                    <div class="play">
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <video class="rounded border shadow-sm" poster="media/poster.webp" preload="none" muted>
+                    <source src="media/Top Ads- high-performing auction ads.mp4" type="video/mp4">
+                </video>
+                <div class="content rounded-bottom">
+                    <span>traffic</span>
+                    <h2>cosmatics</h2>
+                    <a href="">
+                        <small><i class="far fa-thumbs-up"></i> 125</small>
+                        <small><i class="far fa-comment"></i>26</small>
+                        <small><i class="fas fa-share"></i>7</small>
+                    </a>
+                </div>
+            </div>
+            <div class="video">
+                <form action="" method="" class="favourite">
+                    <button type="submit"><i class="fa fa-star"></i></button>
+                </form>
+                <form action="" method="" class="block">
+                    <button type="submit"><i class="fa fa-ban"></i></button>
+                </form>
+                <div class="overlay rounded">
+                    <div class="play">
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <video class="rounded border shadow-sm" poster="media/poster.webp" preload="none" muted>
+                    <source src="media/Top Ads- high-performing auction ads.mp4" type="video/mp4">
+                </video>
+                <div class="content rounded-bottom">
+                    <span>traffic</span>
+                    <h2>cosmatics</h2>
+                    <a href="">
+                        <small><i class="far fa-thumbs-up"></i>125</small>
+                        <small><i class="far fa-comment"></i>26</small>
+                        <small><i class="fas fa-share"></i>7</small>
+                    </a>
+                </div>
+            </div>
+            <div class="video">
+                <form action="" method="" class="favourite">
+                    <button type="submit"><i class="fa fa-star"></i></button>
+                </form>
+                <form action="" method="" class="block">
+                    <button type="submit"><i class="fa fa-ban"></i></button>
+                </form>
+                <div class="overlay rounded">
+                    <div class="play">
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <video class="rounded border shadow-sm" poster="media/poster.webp" preload="none" muted>
+                    <source src="media/Top Ads- high-performing auction ads.mp4" type="video/mp4">
+                </video>
+                <div class="content rounded-bottom">
+                    <span>traffic</span>
+                    <h2>cosmatics</h2>
+                    <a href="">
+                        <small><i class="far fa-thumbs-up"></i> 125</small>
+                        <small><i class="far fa-comment"></i>26</small>
+                        <small><i class="fas fa-share"></i>7</small>
+                    </a>
+                </div>
+            </div>
+            <div class="video">
+                <form action="" method="" class="favourite">
+                    <button type="submit"><i class="fa fa-star"></i></button>
+                </form>
+                <form action="" method="" class="block">
+                    <button type="submit"><i class="fa fa-ban"></i></button>
+                </form>
+                <div class="overlay rounded">
+                    <div class="play">
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <video class="rounded border shadow-sm" poster="media/poster.webp" preload="none" muted>
+                    <source src="media/Top Ads- high-performing auction ads.mp4" type="video/mp4">
+                </video>
+                <div class="content rounded-bottom">
+                    <span>traffic</span>
+                    <h2>cosmatics</h2>
+                    <a href="">
+                        <small><i class="far fa-thumbs-up"></i>125</small>
+                        <small><i class="far fa-comment"></i>26</small>
+                        <small><i class="fas fa-share"></i>7</small>
+                    </a>
+                </div>
+            </div>
+            <div class="video">
+                <form action="" method="" class="favourite">
+                    <button type="submit"><i class="fa fa-star"></i></button>
+                </form>
+                <form action="" method="" class="block">
+                    <button type="submit"><i class="fa fa-ban"></i></button>
+                </form>
+                <div class="overlay rounded">
+                    <div class="play">
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <video class="rounded border shadow-sm" poster="media/poster.webp" preload="none" muted>
+                    <source src="media/Top Ads- high-performing auction ads.mp4" type="video/mp4">
+                </video>
+                <div class="content rounded-bottom">
+                    <span>traffic</span>
+                    <h2>cosmatics</h2>
+                    <a href="">
+                        <small><i class="far fa-thumbs-up"></i> 125</small>
+                        <small><i class="far fa-comment"></i>26</small>
+                        <small><i class="fas fa-share"></i>7</small>
+                    </a>
+                </div>
+            </div>
+            <div class="video">
+                <form action="" method="" class="favourite">
+                    <button type="submit"><i class="fa fa-star"></i></button>
+                </form>
+                <form action="" method="" class="block">
+                    <button type="submit"><i class="fa fa-ban"></i></button>
+                </form>
+                <div class="overlay rounded">
+                    <div class="play">
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <video class="rounded border shadow-sm" poster="media/poster.webp" preload="none" muted>
+                    <source src="media/Top Ads- high-performing auction ads.mp4" type="video/mp4">
+                </video>
+                <div class="content rounded-bottom">
+                    <span>traffic</span>
+                    <h2>cosmatics</h2>
+                    <a href="">
+                        <small><i class="far fa-thumbs-up"></i>125</small>
+                        <small><i class="far fa-comment"></i>26</small>
+                        <small><i class="fas fa-share"></i>7</small>
+                    </a>
+                </div>
+            </div>
+            <div class="video">
+                <form action="" method="" class="favourite">
+                    <button type="submit"><i class="fa fa-star"></i></button>
+                </form>
+                <form action="" method="" class="block">
+                    <button type="submit"><i class="fa fa-ban"></i></button>
+                </form>
+                <div class="overlay rounded">
+                    <div class="play">
+                        <i class="fa fa-play"></i>
+                    </div>
+                </div>
+                <video class="rounded border shadow-sm" poster="media/poster.webp" preload="none" muted>
+                    <source src="media/Top Ads- high-performing auction ads.mp4" type="video/mp4">
+                </video>
+                <div class="content rounded-bottom">
+                    <span>traffic</span>
+                    <h2>cosmatics</h2>
+                    <a href="">
+                        <small><i class="far fa-thumbs-up"></i> 125</small>
+                        <small><i class="far fa-comment"></i>26</small>
+                        <small><i class="fas fa-share"></i>7</small>
+                    </a>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="d-flex justify-content-center mb-5">
+            <footer aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
