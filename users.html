@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Quicksand:wght@300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.14.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="up">
+        <i class="far fa-sort-up"></i>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="main.html">Main</a>
+        <a href="favorites.html">favorites</a>
+        <a class="active" href="users.html">Users</a>
+        <a href="index.html">
+            <button type="button">Log Out</button>
+        </a>
+    </nav>
+
+    <header>
+        <div>
+            <div class="form-group">
+                <h2>Add New <b>Keyword</b>s</h2>
+            </div>
+        </div>
+    </header>
+
+    <section class="new_keyword shadow-sm">
+        <i id="exit" class="fa fa-times"></i>
+        <div class="user-filters">
+            <label class="d-block text-center p-1 font-weight-bold" style="font-size: 20px;">Add New User</label>
+            <div class="container-fluid">
+                <form class="row" name="myForm" action="url" method="post">
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="form-group">
+                            <select class="form-control" name="">
+                                <option disabled selected value="">Type</option>
+                                <option value="sa">Super Admin</option>
+                                <option value="a">Admin</option>
+                                <option value="u">User</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <div class="form-group">
+                            <input type="text" name="username" class="form-control" placeholder="Username">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-12">
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="User Password">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary" id="add_user">Add</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="add-new">
+        <button type="button" id="add_new" class="btn btn-primary">Add New User</button>
+    </section>
+
+    <section class="main py-3 mx-auto">
+        <table class="table table-striped mx-auto" id="main_table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Username</th>
+                    <th>Type</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Status</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mohey</td>
+                    <td><span class="badge badge-primary">super admin</span></td>
+                    <td>mohey@leadintop.com</td>
+                    <td>Agrw0520#asf</td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;">
+                                <span class="badge badge-success">active</span>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><i
+                                    class="fa fa-times text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Khaled</td>
+                    <td><span class="badge badge-primary">user</span></td>
+                    <td>khaled@leadintop.com</td>
+                    <td>$.sfwswed5527</td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;">
+                                <span class="badge badge-danger">inactive</span>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><i
+                                    class="fa fa-times text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script>
+        let select_script = true;
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keywords</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles:wght@400;700&family=Quicksand:wght@300;400;500;600;700&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.14.0/css/all.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="up">
+        <i class="far fa-sort-up"></i>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a class="active" href="main.html">Main</a>
+        <a href="blacklist.html">blacklist</a>
+        <a href="favorites.html">favorites</a>
+        <a href="users.html">Users</a>
+        <a href="">
+            <button type="button">Log Out</button>
+        </a>
+    </nav>
+
+    <header>
+        <div>
+            <div class="form-group">
+                <h2>Add New <b>Keyword</b>s</h2>
+            </div>
+        </div>
+    </header>
+
+    <section class="new_keyword shadow-sm">
+        <i id="exit" class="fa fa-times"></i>
+        <div class="filters">
+            <label class="d-block p-1">Basic filters</label>
+            <div class="filter type_1">
+                <select class="w-100 shadow-sm" id="country" name="">
+                    <option disabled selected value="">Country</option>
+                    <option value="us">United Status</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="eg">EGYPT</option>
+                </select>
+            </div>
+            <div class="filter type_1">
+                <select class="w-100 shadow-sm" id="industry" name="">
+                    <option disabled selected value="">Industry</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="filter type_1">
+                <select class="w-100 shadow-sm" id="objective" name="">
+                    <option disabled selected value="">objective</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="filter type_1 sort_by">
+                <select class="w-100 shadow-sm" id="sort_by" name="">
+                    <option disabled selected value="">Sort By</option>
+                    <option value="CTR">CTR</option>
+                    <option value="CVR">CVR</option>
+                    <option value="Clicks">Clicks</option>
+                    <option value="Conversion">Conversion</option>
+                    <option value="Remain">Remain</option>
+                </select>
+            </div>
+            <div class="filter type_1">
+                <select class="w-100 shadow-sm" id="duration" name="">
+                    <option disabled selected value="">Duration</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="filter type_1 interval">
+                <select class="w-100 shadow-sm" id="interval" name="">
+                    <option disabled selected value="">Interval</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="clearfix"></div>
+            <label class="d-block pt-1 px-1">Date filters</label>
+            <div class="filter type_2">
+                <span>from: </span>
+                <!-- <select class="w-100 shadow-sm" name=""> -->
+                <input class="form-control shadow-sm" id="from" type="date" name="">
+            </div>
+            <div class="filter type_2">
+                <span>to: </span>
+                <!-- <select class="w-100 shadow-sm" name=""> -->
+                <input class="form-control shadow-sm" id="to" type="date" name="">
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="top-filters used">
+            <span style="color: #2d2d2d; font-weight: 400;">Interactive Filters :</span>
+            <span>
+                <button>
+                    <b>Likes</b>
+                    <svg width="16" height="16" viewBox="0 0 48 48" fill="none">
+                        <path d="M24 42L24 6" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M36 30L24 42L12 30" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </span>
+            <span>
+                <button>
+                    <b>Comments</b>
+                    <svg width="16" height="16" viewBox="0 0 48 48" fill="none">
+                        <path d="M24 42L24 6" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M36 30L24 42L12 30" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </span>
+            <span>
+                <button>
+                    <b>Shares</b>
+                    <svg width="16" height="16" viewBox="0 0 48 48" fill="none">
+                        <path d="M24 42L24 6" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M36 30L24 42L12 30" stroke="#BDBDBD" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+            </span>
+        </div>
+        <div class="our__filters">
+        </div>
+        <div class="text-center">
+            <form name="myForm" action="url" method="post">
+                <input type="hidden" id="text">
+                <input type="hidden" value="" name="all_filters" id="form_input">
+                <button type="submit" class="btn btn-primary" id="apply_filters" style="width: 250px;">Add new
+                    Keyword</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="add-new">
+        <button type="button" id="add_new" class="btn btn-primary">Add New</button>
+    </section>
+
+    <section class="main py-3 mx-auto">
+        <table class="table table-striped mx-auto" id="main_table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Keyword</th>
+                    <th>Country</th>
+                    <th>Industry</th>
+                    <th>Objective</th>
+                    <th>Sort by</th>
+                    <th>Duration</th>
+                    <th>Interval</th>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Interactive Filters</th>
+                    <th>Status</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>perfume</td>
+                    <th>
+                        <span class="badge badge-primary">egypt</span>
+                        <span class="badge badge-primary">united states</span>
+                        <span class="badge badge-primary">spain</span>
+                    </th>
+                    <td>
+                        <span class="badge badge-primary">apps/social</span>
+                        <span class="badge badge-primary">financial services/funds</span>
+                    </td>
+                    <th>
+                        <span class="badge badge-primary">reach</span>
+                        <span class="badge badge-primary">traffic</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">conversion</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">>50s</span>
+                        <span class="badge badge-primary">30–40s</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">last 180 days</span>
+                    </th>
+                    <th><span class="badge badge-primary">11/1/2023</span></th>
+                    <th><span class="badge badge-primary">30/1/2023</span></th>
+                    <td>
+                        <span class="badge badge-primary">Likes</span>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;">
+                                <span class="badge badge-success">active</span>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><i
+                                    class="fa fa-times text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>perfume</td>
+                    <th>
+                        <span class="badge badge-primary">egypt</span>
+                    </th>
+                    <td>
+                        <span class="badge badge-primary">apps/social</span>
+                    </td>
+                    <th>
+                        <span class="badge badge-primary">reach</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">conversion</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">>50s</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">last 180 days</span>
+                    </th>
+                    <th><span class="badge badge-primary">11/1/2023</span></th>
+                    <th><span class="badge badge-primary">30/1/2023</span></th>
+                    <td>
+                        <span class="badge badge-primary">Likes</span>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;">
+                                <span class="badge badge-danger">inactive</span>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><i
+                                    class="fa fa-times text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>perfume</td>
+                    <th>
+                        <span class="badge badge-primary">egypt</span>
+                    </th>
+                    <td>
+                        <span class="badge badge-primary">apps/social</span>
+                    </td>
+                    <th>
+                        <span class="badge badge-primary">reach</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">conversion</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">>50s</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">last 180 days</span>
+                    </th>
+                    <th><span class="badge badge-primary">11/1/2023</span></th>
+                    <th><span class="badge badge-primary">30/1/2023</span></th>
+                    <td>
+                        <span class="badge badge-primary">Likes</span>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;">
+                                <span class="badge badge-danger">inactive</span>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><i
+                                    class="fa fa-times text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>perfume</td>
+                    <th>
+                        <span class="badge badge-primary">egypt</span>
+                    </th>
+                    <td>
+                        <span class="badge badge-primary">apps/social</span>
+                    </td>
+                    <th>
+                        <span class="badge badge-primary">reach</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">conversion</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">>50s</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">last 180 days</span>
+                    </th>
+                    <th><span class="badge badge-primary">11/1/2023</span></th>
+                    <th><span class="badge badge-primary">30/1/2023</span></th>
+                    <td>
+                        <span class="badge badge-primary">Likes</span>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;">
+                                <span class="badge badge-danger">inactive</span>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><i
+                                    class="fa fa-times text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>perfume</td>
+                    <th>
+                        <span class="badge badge-primary">egypt</span>
+                    </th>
+                    <td>
+                        <span class="badge badge-primary">apps/social</span>
+                    </td>
+                    <th>
+                        <span class="badge badge-primary">reach</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">conversion</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">>50s</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">last 180 days</span>
+                    </th>
+                    <th><span class="badge badge-primary">11/1/2023</span></th>
+                    <th><span class="badge badge-primary">30/1/2023</span></th>
+                    <td>
+                        <span class="badge badge-primary">Likes</span>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;">
+                                <span class="badge badge-danger">inactive</span>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><i
+                                    class="fa fa-times text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>perfume</td>
+                    <th>
+                        <span class="badge badge-primary">egypt</span>
+                    </th>
+                    <td>
+                        <span class="badge badge-primary">apps/social</span>
+                    </td>
+                    <th>
+                        <span class="badge badge-primary">reach</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">conversion</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">>50s</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">last 180 days</span>
+                    </th>
+                    <th><span class="badge badge-primary">11/1/2023</span></th>
+                    <th><span class="badge badge-primary">30/1/2023</span></th>
+                    <td>
+                        <span class="badge badge-primary">Likes</span>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;">
+                                <span class="badge badge-danger">inactive</span>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><i
+                                    class="fa fa-times text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>perfume</td>
+                    <th>
+                        <span class="badge badge-primary">egypt</span>
+                    </th>
+                    <td>
+                        <span class="badge badge-primary">apps/social</span>
+                    </td>
+                    <th>
+                        <span class="badge badge-primary">reach</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">conversion</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">>50s</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">last 180 days</span>
+                    </th>
+                    <th><span class="badge badge-primary">11/1/2023</span></th>
+                    <th><span class="badge badge-primary">30/1/2023</span></th>
+                    <td>
+                        <span class="badge badge-primary">Likes</span>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;">
+                                <span class="badge badge-danger">inactive</span>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><i
+                                    class="fa fa-times text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>perfume</td>
+                    <th>
+                        <span class="badge badge-primary">egypt</span>
+                    </th>
+                    <td>
+                        <span class="badge badge-primary">apps/social</span>
+                    </td>
+                    <th>
+                        <span class="badge badge-primary">reach</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">conversion</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">>50s</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">last 180 days</span>
+                    </th>
+                    <th><span class="badge badge-primary">11/1/2023</span></th>
+                    <th><span class="badge badge-primary">30/1/2023</span></th>
+                    <td>
+                        <span class="badge badge-primary">Likes</span>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;">
+                                <span class="badge badge-danger">inactive</span>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><i
+                                    class="fa fa-times text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>perfume</td>
+                    <th>
+                        <span class="badge badge-primary">egypt</span>
+                    </th>
+                    <td>
+                        <span class="badge badge-primary">apps/social</span>
+                    </td>
+                    <th>
+                        <span class="badge badge-primary">reach</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">conversion</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">>50s</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">last 180 days</span>
+                    </th>
+                    <th><span class="badge badge-primary">11/1/2023</span></th>
+                    <th><span class="badge badge-primary">30/1/2023</span></th>
+                    <td>
+                        <span class="badge badge-primary">Likes</span>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;">
+                                <span class="badge badge-danger">inactive</span>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><i
+                                    class="fa fa-times text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>perfume</td>
+                    <th>
+                        <span class="badge badge-primary">egypt</span>
+                    </th>
+                    <td>
+                        <span class="badge badge-primary">apps/social</span>
+                    </td>
+                    <th>
+                        <span class="badge badge-primary">reach</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">conversion</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">>50s</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">last 180 days</span>
+                    </th>
+                    <th><span class="badge badge-primary">11/1/2023</span></th>
+                    <th><span class="badge badge-primary">30/1/2023</span></th>
+                    <td>
+                        <span class="badge badge-primary">Likes</span>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;">
+                                <span class="badge badge-danger">inactive</span>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><i
+                                    class="fa fa-times text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>perfume</td>
+                    <th>
+                        <span class="badge badge-primary">egypt</span>
+                    </th>
+                    <td>
+                        <span class="badge badge-primary">apps/social</span>
+                    </td>
+                    <th>
+                        <span class="badge badge-primary">reach</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">conversion</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">>50s</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">last 180 days</span>
+                    </th>
+                    <th><span class="badge badge-primary">11/1/2023</span></th>
+                    <th><span class="badge badge-primary">30/1/2023</span></th>
+                    <td>
+                        <span class="badge badge-primary">Likes</span>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;">
+                                <span class="badge badge-danger">inactive</span>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><i
+                                    class="fa fa-times text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>perfume</td>
+                    <th>
+                        <span class="badge badge-primary">egypt</span>
+                    </th>
+                    <td>
+                        <span class="badge badge-primary">apps/social</span>
+                    </td>
+                    <th>
+                        <span class="badge badge-primary">reach</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">conversion</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">>50s</span>
+                    </th>
+                    <th>
+                        <span class="badge badge-primary">last 180 days</span>
+                    </th>
+                    <th><span class="badge badge-primary">11/1/2023</span></th>
+                    <th><span class="badge badge-primary">30/1/2023</span></th>
+                    <td>
+                        <span class="badge badge-primary">Likes</span>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;">
+                                <span class="badge badge-danger">inactive</span>
+                            </button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="" method="post">
+                            <input type="hidden" value="id">
+                            <button type="submit"
+                                style="background-color: transparent; border: none; padding: 0; margin: 0;"><i
+                                    class="fa fa-times text-danger"></i></button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="js/jquery.nice-select.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
